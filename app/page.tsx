@@ -16,6 +16,8 @@ import {
   MessageCircle,
   ChevronDown,
 } from 'lucide-react';
+import Image from 'next/image';
+import portrait from '@/assets/portrait-young-businesswoman-holding-eyeglasses-hand-against-gray-backdrop.jpg';
 
 // Define types for form data and errors
 interface FormData {
@@ -201,10 +203,13 @@ export default function Home() {
             
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/6932826/pexels-photo-6932826.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+                <Image
+                  src={portrait}
                   alt="Dr. Serena Blake"
                   className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                  width={800}
+                  height={1000}
+                  priority
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center space-x-4">
